@@ -8,6 +8,7 @@
  * @module
  */
 
+import type * as invites from "../invites.js";
 import type * as myFunctions from "../myFunctions.js";
 
 import type {
@@ -17,6 +18,7 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  invites: typeof invites;
   myFunctions: typeof myFunctions;
 }>;
 
@@ -46,4 +48,6 @@ export declare const internal: FilterApi<
   FunctionReference<any, "internal">
 >;
 
-export declare const components: {};
+export declare const components: {
+  inviteLinks: import("convex-invite-links/_generated/component.js").ComponentApi<"inviteLinks">;
+};
