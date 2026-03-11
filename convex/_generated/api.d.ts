@@ -9,7 +9,6 @@
  */
 
 import type * as invites from "../invites.js";
-import type * as myFunctions from "../myFunctions.js";
 
 import type {
   ApiFromModules,
@@ -19,7 +18,6 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   invites: typeof invites;
-  myFunctions: typeof myFunctions;
 }>;
 
 /**
